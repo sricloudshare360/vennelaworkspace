@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function calculateGrade(marks) {
+    if (marks < 0 || marks > 100 || isNaN(marks)) {
+        return "Invalid Marks";
+    }
+
+    let grade;
+
+    switch (true) {
+        case marks >= 90:
+            grade = "A";
+            break;
+        case marks >= 80:
+            grade = "B";
+            break;
+        case marks >= 70:
+            grade = "C";
+            break;
+        case marks >= 60:
+            grade = "D";
+            break;
+        default:
+            grade = "F";
+    }
+    return grade;
+}
+
+let input = prompt("Enter the marks (0-100):");
+let marks = parseInt(input);
+
+if (marks >= 0 && marks <= 100) {
+    let grade = calculateGrade(marks);
+    console.log(`Grade: ${grade}`);
+} else {
+    console.log("Please enter a valid number between 0 and 100.");
+}
+  </script>
+</body>
+</html>
