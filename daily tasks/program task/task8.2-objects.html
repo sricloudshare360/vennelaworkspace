@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const student = {
+    name: "Vennela",
+    age: 20,
+    marks: {
+        math: 92,english: 85, science: 78
+    }
+};
+
+function displayStudentDetails(student) {
+    console.log("Student Details:");
+    console.log(`Name: ${student.name}`);
+    console.log(`Age: ${student.age}`);
+    console.log("Marks:")
+    for (const subject in student.marks) {
+        console.log(`  ${subject}: ${student.marks[subject]}`);
+    }
+}
+displayStudentDetails(student);
+
+    </script>
+</body>
+</html>

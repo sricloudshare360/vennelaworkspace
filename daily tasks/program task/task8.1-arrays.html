@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function findLargestAndSmallest(arr) {
+    if (arr.length === 0) {
+        console.log("The array is empty.");
+        return;
+    }
+
+    let largest = arr[0];
+    let smallest = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > largest) {
+            largest = arr[i];
+        }
+        if (arr[i] < smallest) {
+            smallest = arr[i];
+        }
+    }
+
+    console.log("Largest number:", largest);
+    console.log("Smallest number:", smallest);
+}
+
+const numbers = [5,10,25,16,-15,82,23];
+findLargestAndSmallest(numbers);
+
+    </script>
+</body>
+</html>
