@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alert Box Example</title>
+</head>
+<body>
+  <h1>Alert Box</h1>
+  <label for="Message">Enter your message:</label>
+  <input type="text" id="Message" />
+  <button id="showAlert">Show Alert</button>
+
+  <script>
+    const button = document.getElementById("showAlert");
+    button.addEventListener("click", () => {
+      const message = document.getElementById("Message").value;
+      if (message.trim() === "")
+      {
+        alert("Please enter a message first!");
+      }
+       else 
+       {
+        alert(`Your message: ${message}`);
+      }
+    });
+  </script>
+</body>
+</html>
