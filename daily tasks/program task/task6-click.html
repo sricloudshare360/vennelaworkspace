@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Message</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: left;
+            margin-top: 5px;
+        }
+        button {
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #greeting {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h2>Click the button for Greeting!</h2>
+    <button id="greetButton">Click Me</button>
+    <p id="greeting"></p>
+
+    <script>
+        const button = document.getElementById("greetButton");
+        const greeting = document.getElementById("greeting");
+
+        button.addEventListener("click", function() {
+            greeting.textContent = "Hello! Have a great day!";
+        });
+    </script>
+</body>
+</html>
